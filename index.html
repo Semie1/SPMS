@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated School Performance Monitoring System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">SPMS</div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="#modules"><i class="fas fa-th-large"></i> Modules</a></li>
+                <li><a href="#roles"><i class="fas fa-users-cog"></i> User Roles</a></li>
+                <li><a href="#database"><i class="fas fa-database"></i> Database</a></li>
+                <li><a href="pages/login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Automated School Performance Monitoring System</h1>
+            <p>A comprehensive solution for tracking student performance, attendance, and academic progress with an efficient relational database structure.</p>
+            <a href="pages/login.html" class="btn"><i class="fas fa-sign-in-alt"></i> Get Started</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Key Features</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-6931519_1280.png" alt="Student Management">
+                    </div>
+                    <h3>Student Management</h3>
+                    <p>Maintain comprehensive student profiles with personal details, academic history, and performance metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/teacher-5602475_1280.png" alt="Class Organization">
+                    </div>
+                    <h3>Class Organization</h3>
+                    <p>Organize students into classes with dedicated subjects and assigned teachers for efficient academic management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/pencil-6602791_1280.png" alt="Performance Tracking">
+                    </div>
+                    <h3>Performance Tracking</h3>
+                    <p>Track student marks across subjects and terms with detailed performance analytics and progress reports.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-6931519_1280.png" alt="Attendance Monitoring">
+                    </div>
+                    <h3>Attendance Monitoring</h3>
+                    <p>Record and monitor student attendance with automatic calculation of attendance percentages and absence alerts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/teacher-5602475_1280.png" alt="Teacher Management">
+                    </div>
+                    <h3>Teacher Management</h3>
+                    <p>Manage teacher assignments to subjects and classes with workload tracking and performance evaluation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/books-6780765_1280.png" alt="Term-based Reporting">
+                    </div>
+                    <h3>Term-based Reporting</h3>
+                    <p>Generate comprehensive term-wise reports for students, classes, and subjects with performance comparisons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modules" class="database-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Functional Modules</h2>
+            </div>
+
+            <div class="db-schema">
+                <h3><i class="fas fa-th-large"></i> System Modules and Workflow</h3>
+
+                <table class="schema-table">
+                    <tr>
+                        <th>Module</th>
+                        <th>Description</th>
+                        <th>Key Functionalities</th>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-user-graduate"></i> Student Management</td>
+                        <td>Manages student registration, profiles, and class assignments.</td>
+                        <td>
+                            <ul>
+                                <li>Student registration and enrollment</li>
+                                <li>Student profile management</li>
+                                <li>Class assignment and tracking</li>
+                                <li>Student search and filtering</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-chalkboard-teacher"></i> Subject and Teacher Management</td>
+                        <td>Assigns subjects to teachers and links to classes.</td>
+                        <td>
+                            <ul>
+                                <li>Teacher profile management</li>
+                                <li>Subject creation and organization</li>
+                                <li>Subject-teacher assignment</li>
+                                <li>Class-subject linking</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-pen"></i> Marks Entry</td>
+                        <td>Teachers record subject marks for each student per term.</td>
+                        <td>
+                            <ul>
+                                <li>Term-wise marks entry</li>
+                                <li>Grade calculation</li>
+                                <li>Performance tracking</li>
+                                <li>Score validation</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-calendar-check"></i> Attendance Tracking</td>
+                        <td>Teachers log daily attendance with present/absent status.</td>
+                        <td>
+                            <ul>
+                                <li>Daily attendance recording</li>
+                                <li>Attendance report generation</li>
+                                <li>Absence tracking and alerts</li>
+                                <li>Attendance statistics</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-file-alt"></i> Report Generation</td>
+                        <td>System compiles results and attendance summaries into term reports.</td>
+                        <td>
+                            <ul>
+                                <li>Individual student reports</li>
+                                <li>Class performance reports</li>
+                                <li>Subject analysis reports</li>
+                                <li>Term-wise comparison reports</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-chart-line"></i> Dashboard and Alerts</td>
+                        <td>Displays class performance stats and alerts for at-risk students.</td>
+                        <td>
+                            <ul>
+                                <li>Performance analytics dashboard</li>
+                                <li>Low attendance alerts</li>
+                                <li>Poor performance notifications</li>
+                                <li>Progress tracking visualizations</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="roles" class="features">
+        <div class="container">
+            <div class="section-heading">
+                <h2>User Roles and Permissions</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3>Administrator</h3>
+                    <p>Oversees system operation, adds users, and views all reports.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Complete system management</li>
+                        <li>User account administration</li>
+                        <li>Access to all modules and reports</li>
+                        <li>System configuration and settings</li>
+                        <li>Data backup and maintenance</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3>Teacher</h3>
+                    <p>Inputs marks and attendance for assigned classes.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Record student attendance</li>
+                        <li>Enter subject marks</li>
+                        <li>View assigned classes only</li>
+                        <li>Generate basic reports</li>
+                        <li>Manage student performance</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3>Head Teacher</h3>
+                    <p>Views consolidated school performance and generates reports.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Access all class data</li>
+                        <li>Review teacher inputs</li>
+                        <li>Generate comprehensive reports</li>
+                        <li>Monitor school-wide performance</li>
+                        <li>Access performance analytics</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3>Student</h3>
+                    <p>Access personal grades, attendance records, and academic progress.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>View personal grades and marks</li>
+                        <li>Check attendance records</li>
+                        <li>Access term reports</li>
+                        <li>Monitor academic progress</li>
+                        <li>Download report cards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="database" class="database-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Database Structure</h2>
+            </div>
+
+            <div class="db-schema">
+                <h3><i class="fas fa-table"></i> Entities</h3>
+
+                <table class="schema-table">
+                    <tr>
+                        <th>Entity</th>
+                        <th>Key Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-user"></i> Student</td>
+                        <td>student_id, name, dob, gender, admission_date, class_id</td>
+                        <td>Stores information about students including personal details and assigned class</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-users"></i> Class</td>
+                        <td>class_id, name, grade, section, academic_year</td>
+                        <td>Represents a class/section in the school with its grade and academic year</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-book"></i> Subject</td>
+                        <td>subject_id, name, code, description, grade</td>
+                        <td>Contains details about subjects taught in the school for different grades</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-chalkboard-teacher"></i> Teacher</td>
+                        <td>teacher_id, name, qualification, joining_date, contact</td>
+                        <td>Stores information about teachers including their qualifications</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-chart-line"></i> Marks</td>
+                        <td>mark_id, student_id, subject_id, term_id, marks_obtained, max_marks</td>
+                        <td>Records marks obtained by students in different subjects for each term</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-calendar-check"></i> Attendance</td>
+                        <td>attendance_id, student_id, date, status, term_id</td>
+                        <td>Tracks daily attendance records of students during each term</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-calendar-alt"></i> Term</td>
+                        <td>term_id, name, start_date, end_date, academic_year</td>
+                        <td>Defines academic terms within an academic year with their date ranges</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-user-shield"></i> User</td>
+                        <td>user_id, username, password, role, last_login</td>
+                        <td>System users including administrators, teachers, and other staff with access levels</td>
+                    </tr>
+                </table>
+
+                <div class="relationships">
+                    <h3><i class="fas fa-project-diagram"></i> Relationships</h3>
+
+                    <div class="relationship-item">
+                        <strong>Student</strong> <span></span> <strong>Class</strong>: A student belongs to one class, and a class has many students
+                    </div>
+                    <div class="relationship-item">
+                        <strong>Teacher</strong> <span></span> <strong>Subject</strong>: A teacher can teach multiple subjects, and a subject can be taught by multiple teachers
+                    </div>
+                    <div class="relationship-item">
+                        <strong>Class</strong> <span></span> <strong>Subject</strong>: A class has multiple subjects, and a subject can be taught in multiple classes
+                    </div>
+                    <div class="relationship-item">
+                        <strong>Student</strong> <span></span> <strong>Marks</strong>: A student has many marks records across subjects and terms
+                    </div>
+                    <div class="relationship-item">
+                        <strong>Student</strong> <span></span> <strong>Attendance</strong>: A student has many attendance records across terms
+                    </div>
+                    <div class="relationship-item">
+                        <strong>Term</strong> <span></span> <strong>Marks</strong>: Marks are recorded for specific terms
+                    </div>
+                    <div class="relationship-item">
+                        <strong>Term</strong> <span></span> <strong>Attendance</strong>: Attendance is tracked within specific terms
+                    </div>
+                    <div class="relationship-item">
+                        <strong>Subject</strong> <span></span> <strong>Marks</strong>: Marks are recorded for specific subjects
+                    </div>
+                </div>
+
+                <div class="db-visualization-container">
+                    <h3><i class="fas fa-sitemap"></i> Entity Relationship Diagram</h3>
+                    <img src="images/database-schema-1895779_1280.png" alt="Database Schema Diagram" style="max-width: 100%; height: auto; margin-top: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <h2>Ready to streamline your school's performance monitoring?</h2>
+            <p>Get started with our comprehensive system designed to make student performance tracking simple and effective.</p>
+            <a href="pages/login.html" class="btn"><i class="fas fa-sign-in-alt"></i> Login to System</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">SPMS</div>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#roles">User Roles</a></li>
+                <li><a href="#database">Database</a></li>
+                <li><a href="pages/login.html">Login</a></li>
+            </ul>
+            <div class="copyright">
+                &copy; 2025 Automated School Performance Monitoring System. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Register service worker for offline functionality
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('js/sw.js')
+                .then(function(registration) {
+                    console.log('ServiceWorker registration successful');
+                })
+                .catch(function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        }
+    </script>
+</body>
+
+</html>
